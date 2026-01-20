@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broge Al Shariaa | Operation & Maintenance</title>
+    <meta name="description"
+        content="Broge Al Shariaa Est. for Operation & Maintenance - Providing world-class services in Saudi Arabia.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1F2937',
+                        secondary: '#3B82F6',
+                        accent: '#F59E0B',
+                        light: '#F9FAFB',
+                        dark: '#111827',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        arabic: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body
+    class="bg-gray-50 text-gray-800 font-sans antialiased overflow-x-hidden selection:bg-secondary selection:text-white">
+
+    <!-- Preloader -->
+    <div id="preloader"
+        class="fixed top-0 left-0 w-full h-[100dvh] z-[9999] bg-white flex flex-col items-center justify-center transition-opacity duration-500 overflow-hidden">
+        <div class="text-center">
+            <div class="inline-flex items-center gap-3 mb-6 transform scale-90 sm:scale-100">
+                <!-- Logo Icon -->
+                <div
+                    class="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-xl sm:text-2xl shadow-lg">
+                    B
+                </div>
+                <!-- Logo Text -->
+                <div class="text-start rtl:text-right">
+                    <span class="font-bold text-xl sm:text-2xl tracking-tight text-primary block leading-none"
+                        data-i18n="company_name">مؤسسة برج الشريعة</span>
+                    <span class="text-[10px] sm:text-xs text-secondary tracking-wider block mt-0.5"
+                        data-i18n="tagline">خدمة تنظيف المنازل</span>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="w-48 h-1 bg-gray-100 rounded-full mx-auto overflow-hidden">
+                <div class="h-full bg-secondary rounded-full animate-loader"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div
+                        class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-primary/30">
+                        B
+                    </div>
+                    <div>
+                        <span class="font-bold text-xl tracking-tight text-primary block leading-none"
+                            data-i18n="company_name">Broge Al Shariaa</span>
+                        <span class="text-xs text-gray-500 tracking-wider hidden sm:block mt-0.5"
+                            data-i18n="tagline">For Operation & Maintenance</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
+                    <a href="#about"
+                        class="text-gray-600 hover:text-primary font-medium transition-colors text-sm uppercase tracking-wide"
+                        data-i18n="nav_about">Profile</a>
+                    <a href="#quality"
+                        class="text-gray-600 hover:text-primary font-medium transition-colors text-sm uppercase tracking-wide"
+                        data-i18n="nav_quality">Quality</a>
+                    <a href="#services"
+                        class="text-gray-600 hover:text-primary font-medium transition-colors text-sm uppercase tracking-wide"
+                        data-i18n="nav_services">Services</a>
+                    <a href="#contact"
+                        class="text-gray-600 hover:text-primary font-medium transition-colors text-sm uppercase tracking-wide"
+                        data-i18n="nav_contact">Contact</a>
+
+                    <button id="lang-toggle"
+                        class="px-4 py-1.5 rounded-full border border-gray-200 hover:border-primary hover:text-primary transition-all text-sm font-semibold flex items-center gap-2 group">
+                        <i data-lucide="globe"
+                            class="w-4 h-4 text-gray-400 group-hover:text-primary transition-colors"></i>
+                        <span id="lang-text" class="mb-0.5">English</span>
+                    </button>
+
+                    <a href="https://wa.me/966506795405?text=I'd like a quote for operation and maintenance services."
+                        target="_blank"
+                        class="bg-primary text-white px-6 py-2.5 rounded-lg hover:bg-gray-800 transition-all shadow-lg shadow-gray-200/50 font-medium text-sm transform hover:-translate-y-0.5 active:translate-y-0"
+                        data-i18n="get_quote">Get a Quote</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn"
+                        class="text-gray-600 hover:text-primary focus:outline-none p-2 rounded-md hover:bg-gray-100 transition-colors">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:hidden hidden bg-white border-t border-gray-100 absolute w-full shadow-xl" id="mobile-menu">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#about"
+                    class="block px-3 py-3 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                    data-i18n="nav_about">Profile</a>
+                <a href="#quality"
+                    class="block px-3 py-3 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                    data-i18n="nav_quality">Quality</a>
+                <a href="#services"
+                    class="block px-3 py-3 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                    data-i18n="nav_services">Services</a>
+                <a href="#contact"
+                    class="block px-3 py-3 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                    data-i18n="nav_contact">Contact</a>
+                <div class="pt-4 flex flex-col gap-3 border-t border-gray-100 mt-2">
+                    <button id="mobile-lang-toggle"
+                        class="w-full text-center px-4 py-3 border border-gray-200 rounded-lg text-gray-600 font-medium hover:bg-gray-50 transition-colors">English</button>
+                    <a href="https://wa.me/966506795405?text=I'd like a quote." target="_blank"
+                        class="w-full text-center bg-primary text-white px-4 py-3 rounded-lg font-medium shadow-md"
+                        data-i18n="get_quote">Get a Quote</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden hero-gradient">
+        <div class="absolute inset-0 z-0 opacity-10 pattern-dots"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Left: Content & Service Selector -->
+                <div class="text-center lg:text-start rtl:lg:text-right relative z-20" data-aos="fade-up">
+                    <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight mb-4">
+                        <span data-i18n="hero_title">Operations & Maintenance<br>at your doorstep</span>
+                    </h1>
+
+                    <!-- WhatsApp Number Display -->
+                    <a href="https://wa.me/966506795405" target="_blank"
+                        class="inline-flex items-center gap-2 text-2xl lg:text-3xl font-bold text-secondary mb-6 hover:text-primary transition-colors dir-ltr">
+                        <i data-lucide="phone" class="w-6 h-6 lg:w-8 lg:h-8"></i>
+                        <span dir="ltr">506795405</span>
+                    </a>
+
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0"
+                        data-i18n="hero_subtitle">
+                        Professional solutions for your home and business needs.
+                    </p>
+
+
+
+                    <!-- Service Selector Card -->
+                    <div
+                        class="bg-white rounded-3xl shadow-xl p-4 sm:p-8 card-shadow border border-gray-100 max-w-xl mx-auto lg:mx-0 w-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 text-start rtl:text-right"
+                            data-i18n="hero_card_title">What are you looking for?</h3>
+                        <div class="grid grid-cols-2 xs:grid-cols-3 gap-3 sm:gap-6">
+                            <!-- Pest Control -->
+                            <a href="#services"
+                                class="service-icon-btn flex flex-col items-center gap-3 group text-center">
+                                <div
+                                    class="icon-wrapper w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-secondary transition-all duration-300">
+                                    <i data-lucide="bug" class="w-7 h-7"></i>
+                                </div>
+                                <span
+                                    class="text-sm font-medium text-gray-700 group-hover:text-primary transition-colors"
+                                    data-i18n="xs_pest">Pest Control</span>
+                            </a>
+                            <!-- Manpower -->
+                            <a href="#services"
+                                class="service-icon-btn flex flex-col items-center gap-3 group text-center">
+                                <div
+                                    class="icon-wrapper w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-secondary transition-all duration-300">
+                                    <i data-lucide="users" class="w-7 h-7"></i>
+                                </div>
+                                <span
+                                    class="text-sm font-medium text-gray-700 group-hover:text-primary transition-colors"
+                                    data-i18n="xs_manpower">Manpower</span>
+                            </a>
+                            <!-- Cleaning -->
+                            <a href="#services"
+                                class="service-icon-btn flex flex-col items-center gap-3 group text-center">
+                                <div
+                                    class="icon-wrapper w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-secondary transition-all duration-300">
+                                    <i data-lucide="sparkles" class="w-7 h-7"></i>
+                                </div>
+                                <span
+                                    class="text-sm font-medium text-gray-700 group-hover:text-primary transition-colors"
+                                    data-i18n="xs_cleaning">Cleaning</span>
+                            </a>
+                            <!-- HVAC -->
+                            <a href="#services"
+                                class="service-icon-btn flex flex-col items-center gap-3 group text-center">
+                                <div
+                                    class="icon-wrapper w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-secondary transition-all duration-300">
+                                    <i data-lucide="fan" class="w-7 h-7"></i>
+                                </div>
+                                <span
+                                    class="text-sm font-medium text-gray-700 group-hover:text-primary transition-colors"
+                                    data-i18n="xs_hvac">HVAC</span>
+                            </a>
+                            <!-- Facade -->
+                            <a href="#services"
+                                class="service-icon-btn flex flex-col items-center gap-3 group text-center">
+                                <div
+                                    class="icon-wrapper w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-secondary transition-all duration-300">
+                                    <!-- Building icon alternative if 'building-2' not avail, use 'building' -->
+                                    <i data-lucide="building" class="w-7 h-7"></i>
+                                </div>
+                                <span
+                                    class="text-sm font-medium text-gray-700 group-hover:text-primary transition-colors"
+                                    data-i18n="xs_facade">Facade</span>
+                            </a>
+                            <!-- Landscape -->
+                            <a href="#services"
+                                class="service-icon-btn flex flex-col items-center gap-3 group text-center">
+                                <div
+                                    class="icon-wrapper w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-secondary transition-all duration-300">
+                                    <i data-lucide="flower" class="w-7 h-7"></i>
+                                </div>
+                                <span
+                                    class="text-sm font-medium text-gray-700 group-hover:text-primary transition-colors"
+                                    data-i18n="xs_landscape">Landscape</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Animated Image Collage -->
+                <div class="relative w-full max-w-[400px] lg:max-w-none mx-auto mt-8 lg:mt-0" data-aos="fade-left"
+                    data-aos-delay="200">
+                    <!-- Background Blob -->
+                    <div
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-100/50 rounded-full blur-3xl -z-10 animate-pulse-subtle">
+                    </div>
+
+                    <div class="hero-collage-grid">
+                        <!-- Image 1: Main Left (Cleaning Lady) -->
+                        <div class="hero-image-1 rounded-2xl overflow-hidden shadow-2xl animate-float-slow">
+                            <img src="https://plus.unsplash.com/premium_photo-1682098236459-afdc150c80a0?q=80&w=674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Home Cleaning" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Image 2: Top Right (AC/Tech) -->
+                        <div class="hero-image-2 rounded-2xl overflow-hidden shadow-2xl animate-float-medium">
+                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Service 2" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Image 3: Bottom (Gardening/Cleaning) -->
+                        <div class="hero-image-3 rounded-2xl overflow-hidden shadow-2xl animate-float-fast">
+                            <img src="https://images.unsplash.com/photo-1517837817850-607cd9ff1015?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Service 3" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Profile (About) -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div data-aos="fade-right">
+                    <span class="text-secondary font-bold uppercase tracking-widest text-xs mb-2">Company Profile</span>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6" data-i18n="about_title">About Broge Al Shariaa
+                    </h2>
+                    <p class="text-gray-600 mb-6 leading-loose text-lg text-justify" data-i18n="about_desc">
+                        We cover all basic services including Manpower Supply, Support Services, Operation &
+                        Maintenance, and many others.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="p-6 bg-gray-50 rounded-xl border-l-4 border-secondary">
+                            <h4 class="font-bold text-xl text-gray-900 mb-2" data-i18n="mission_title">Our Mission</h4>
+                            <p class="text-gray-600" data-i18n="mission_desc">To be the best and most respected
+                                industrial service provider.</p>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-xl border-l-4 border-accent">
+                            <h4 class="font-bold text-xl text-gray-900 mb-2" data-i18n="vision_title">Our Vision</h4>
+                            <p class="text-gray-600" data-i18n="vision_desc">By upholding basic human values, respecting
+                                nature and helping the weak.</p>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-xl border-l-4 border-green-500">
+                            <h4 class="font-bold text-xl text-gray-900 mb-2" data-i18n="values_title">Our Values</h4>
+                            <p class="text-gray-600" data-i18n="values_desc">Upholding basic human values, continuity,
+                                transparency, and trust.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Why Us embedded in About Flow as per brochure logic -->
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2" data-i18n="why_title">Why To Work With Us?</h2>
+                    <p class="text-gray-500 mb-8" data-i18n="why_subtitle">We have set our goals high to serve our
+                        clients better</p>
+
+                    <div class="grid gap-6">
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                            <div class="flex gap-4">
+                                <div class="bg-blue-100 p-3 rounded-full h-fit"><i data-lucide="trending-up"
+                                        class="w-6 h-6 text-blue-600"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2" data-i18n="why_step_title">Always A Step Ahead
+                                    </h4>
+                                    <p class="text-sm text-gray-600 leading-relaxed" data-i18n="why_step_desc">Remain
+                                        “Always A Step Ahead in Service” by closely working with our clients.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                            <div class="flex gap-4">
+                                <div class="bg-green-100 p-3 rounded-full h-fit"><i data-lucide="smile"
+                                        class="w-6 h-6 text-green-600"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2" data-i18n="why_satisfaction_title">Stakeholders
+                                        Satisfaction</h4>
+                                    <p class="text-sm text-gray-600 leading-relaxed" data-i18n="why_satisfaction_desc">
+                                        To satisfy each of our stakeholders by a systematic strategic review.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                            <div class="flex gap-4">
+                                <div class="bg-purple-100 p-3 rounded-full h-fit"><i data-lucide="globe-2"
+                                        class="w-6 h-6 text-purple-600"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2" data-i18n="why_expand_title">Expand the Business
+                                    </h4>
+                                    <p class="text-sm text-gray-600 leading-relaxed" data-i18n="why_expand_desc">Expand
+                                        the business by collaborating and associating with other partners.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                            <div class="flex gap-4">
+                                <div class="bg-orange-100 p-3 rounded-full h-fit"><i data-lucide="users"
+                                        class="w-6 h-6 text-orange-600"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2" data-i18n="why_empower_title">Empower Human
+                                        Resources</h4>
+                                    <p class="text-sm text-gray-600 leading-relaxed" data-i18n="why_empower_desc">
+                                        Empower human resources to promote entrepreneurship.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Policy Section -->
+    <section id="quality" class="py-24 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gray-800/50 skew-x-12 transform origin-top translate-x-1/4">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4" data-i18n="quality_section_title">Quality Policy</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Standard -->
+                <div class="bg-gray-800 p-8 rounded-2xl text-center hover:bg-gray-700 transition-colors group"
+                    data-aos="fade-up" data-aos-delay="0">
+                    <div
+                        class="w-16 h-16 bg-blue-900/50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="award" class="w-8 h-8 text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="quality_standards">Quality Standards</h3>
+                    <p class="text-gray-400 text-sm" data-i18n="quality_standards_desc">Delivering optimal quality
+                        standards to the customer</p>
+                </div>
+
+                <!-- Expectations -->
+                <div class="bg-gray-800 p-8 rounded-2xl text-center hover:bg-gray-700 transition-colors group"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-16 h-16 bg-green-900/50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="star" class="w-8 h-8 text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="quality_expectations">Expectations</h3>
+                    <p class="text-gray-400 text-sm" data-i18n="quality_expectations_desc">Striving to exceed customer’s
+                        expectations</p>
+                </div>
+
+                <!-- Objectives -->
+                <div class="bg-gray-800 p-8 rounded-2xl text-center hover:bg-gray-700 transition-colors group"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-16 h-16 bg-purple-900/50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="target" class="w-8 h-8 text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="quality_objectives">Quality Objectives</h3>
+                    <p class="text-gray-400 text-sm" data-i18n="quality_objectives_desc">Recognizing defined quality
+                        objectives</p>
+                </div>
+
+                <!-- Improvements -->
+                <div class="bg-gray-800 p-8 rounded-2xl text-center hover:bg-gray-700 transition-colors group"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-16 h-16 bg-orange-900/50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-orange-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="quality_improvements">Improvements</h3>
+                    <p class="text-gray-400 text-sm" data-i18n="quality_improvements_desc">Pursuing continuous
+                        improvements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+                <span class="text-secondary font-semibold tracking-wider uppercase text-sm">What We Offer</span>
+                <h2 class="text-3xl font-bold text-gray-900 sm:text-5xl mt-2 mb-4" data-i18n="services_title">Our
+                    Specialized Services</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-32">
+                <!-- Service 1: Pest Control (Right Text) -->
+                <div class="relative grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+                    <div class="relative h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1584634731339-252c581abfc5?auto=format&fit=crop&w=800&q=80"
+                            alt="Pest Control"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors"></div>
+                        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white/20 blur-2xl rounded-full"></div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="watermark-number text-gray-100">01</span>
+                        <h3 class="text-4xl font-bold text-gray-900 mb-2 mt-4 relative z-10"
+                            data-i18n="service_pest_title">Pest Control</h3>
+                        <p class="text-secondary font-medium mb-6 relative z-10">Professional & Safe</p>
+                        <p class="text-gray-600 leading-relaxed mb-6 relative z-10" data-i18n="service_pest_desc">Broge
+                            Al Shariaa offers pest control services...</p>
+
+                        <ul class="space-y-3 mb-8 relative z-10" data-i18n-list="service_pest_list"></ul>
+
+                        <a href="https://wa.me/966506795405?text=I am interested in Pest Control services."
+                            target="_blank"
+                            class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all relative z-10 group inline-block">
+                            <span>View Details</span>
+                            <i data-lucide="arrow-right"
+                                class="w-5 h-5 group-hover:text-secondary transition-colors rtl:rotate-180 inline-block align-middle"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Landscaping (Left Text) -->
+                <div class="relative grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+                    <div class="order-2 md:order-1 relative">
+                        <span
+                            class="watermark-number text-gray-100 right-auto left-0 rtl:right-0 rtl:left-auto">02</span>
+                        <h3 class="text-4xl font-bold text-gray-900 mb-2 mt-4 relative z-10"
+                            data-i18n="service_landscaping_title">Landscaping</h3>
+                        <p class="text-secondary font-medium mb-6 relative z-10">Green & Beautiful</p>
+                        <p class="text-gray-600 leading-relaxed mb-6 relative z-10"
+                            data-i18n="service_landscaping_desc">Transforming outdoor spaces...</p>
+
+                        <ul class="space-y-3 mb-8 relative z-10" data-i18n-list="service_landscaping_list"></ul>
+
+                        <a href="https://wa.me/966506795405?text=I am interested in Landscaping services."
+                            target="_blank"
+                            class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all relative z-10 group inline-block">
+                            <span>View Details</span>
+                            <i data-lucide="arrow-right"
+                                class="w-5 h-5 group-hover:text-secondary transition-colors rtl:rotate-180 inline-block align-middle"></i>
+                        </a>
+                    </div>
+                    <div
+                        class="order-1 md:order-2 relative h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80"
+                            alt="Landscaping"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-green-900/10 group-hover:bg-transparent transition-colors">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: Maintenance (Right Text) -->
+                <div class="relative grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+                    <div class="relative h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80"
+                            alt="Maintenance"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="relative">
+                        <span class="watermark-number text-gray-100">03</span>
+                        <h3 class="text-4xl font-bold text-gray-900 mb-2 mt-4 relative z-10"
+                            data-i18n="service_maintenance_title">Maintenance</h3>
+                        <p class="text-secondary font-medium mb-6 relative z-10">Reliable & Efficient</p>
+                        <p class="text-gray-600 leading-relaxed mb-6 relative z-10"
+                            data-i18n="service_maintenance_desc">Comprehensive solutions...</p>
+
+                        <ul class="space-y-3 mb-8 relative z-10" data-i18n-list="service_maintenance_list"></ul>
+
+                        <a href="https://wa.me/966506795405?text=I am interested in Maintenance services."
+                            target="_blank"
+                            class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all relative z-10 group inline-block">
+                            <span>View Details</span>
+                            <i data-lucide="arrow-right"
+                                class="w-5 h-5 group-hover:text-secondary transition-colors rtl:rotate-180 inline-block align-middle"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Facility Management (Left Text) -->
+                <div class="relative grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+                    <div class="order-2 md:order-1 relative">
+                        <span
+                            class="watermark-number text-gray-100 right-auto left-0 rtl:right-0 rtl:left-auto">04</span>
+                        <h3 class="text-4xl font-bold text-gray-900 mb-2 mt-4 relative z-10"
+                            data-i18n="service_facility_title">Facility Management</h3>
+                        <p class="text-secondary font-medium mb-6 relative z-10">Integrated Solutions</p>
+                        <p class="text-gray-600 leading-relaxed mb-6 relative z-10" data-i18n="service_facility_desc">
+                            Beyond ordinary perception...</p>
+
+                        <ul class="space-y-3 mb-8 relative z-10" data-i18n-list="service_facility_list"></ul>
+
+                        <a href="https://wa.me/966506795405?text=I am interested in Facility Management services."
+                            target="_blank"
+                            class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all relative z-10 group inline-block">
+                            <span>View Details</span>
+                            <i data-lucide="arrow-right"
+                                class="w-5 h-5 group-hover:text-secondary transition-colors rtl:rotate-180 inline-block align-middle"></i>
+                        </a>
+                    </div>
+                    <div
+                        class="order-1 md:order-2 relative h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
+                            alt="Facility"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                </div>
+
+                <!-- Service 5: Cleaning (Right Text) -->
+                <div class="relative grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+                    <div class="relative h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
+                            alt="Cleaning"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="relative">
+                        <span class="watermark-number text-gray-100">05</span>
+                        <h3 class="text-4xl font-bold text-gray-900 mb-2 mt-4 relative z-10"
+                            data-i18n="service_cleaning_title">Cleaning</h3>
+                        <p class="text-secondary font-medium mb-6 relative z-10">Spotless Standard</p>
+                        <p class="text-gray-600 leading-relaxed mb-6 relative z-10" data-i18n="service_cleaning_desc">A
+                            safe space...</p>
+
+                        <ul class="space-y-3 mb-8 relative z-10" data-i18n-list="service_cleaning_list"></ul>
+
+                        <a href="https://wa.me/966506795405?text=I am interested in Cleaning services." target="_blank"
+                            class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all relative z-10 group inline-block">
+                            <span>View Details</span>
+                            <i data-lucide="arrow-right"
+                                class="w-5 h-5 group-hover:text-secondary transition-colors rtl:rotate-180 inline-block align-middle"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6: Manpower (Left Text) -->
+                <div class="relative grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+                    <div class="order-2 md:order-1 relative">
+                        <span
+                            class="watermark-number text-gray-100 right-auto left-0 rtl:right-0 rtl:left-auto">06</span>
+                        <h3 class="text-4xl font-bold text-gray-900 mb-2 mt-4 relative z-10"
+                            data-i18n="service_manpower_title">Manpower</h3>
+                        <p class="text-secondary font-medium mb-6 relative z-10">Skilled Workforce</p>
+                        <p class="text-gray-600 leading-relaxed mb-6 relative z-10" data-i18n="service_manpower_desc">
+                            Providing skilled workforce...</p>
+
+                        <ul class="space-y-3 mb-8 relative z-10" data-i18n-list="service_manpower_list"></ul>
+
+                        <a href="https://wa.me/966506795405?text=I am interested in Manpower services." target="_blank"
+                            class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all relative z-10 group inline-block">
+                            <span>View Details</span>
+                            <i data-lucide="arrow-right"
+                                class="w-5 h-5 group-hover:text-secondary transition-colors rtl:rotate-180 inline-block align-middle"></i>
+                        </a>
+                    </div>
+                    <div
+                        class="order-1 md:order-2 relative h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80"
+                            alt="Manpower"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                </div>
+
+                <!-- Service 7: Logistics (Right Text) -->
+                <div class="relative grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+                    <div class="relative h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
+                            alt="Logistics"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="relative">
+                        <span class="watermark-number text-gray-100">07</span>
+                        <h3 class="text-4xl font-bold text-gray-900 mb-2 mt-4 relative z-10"
+                            data-i18n="service_logistics_title">Logistics</h3>
+                        <p class="text-secondary font-medium mb-6 relative z-10">Global Solutions</p>
+                        <p class="text-gray-600 leading-relaxed mb-6 relative z-10" data-i18n="service_logistics_desc">
+                            Sea and air freight...</p>
+
+                        <ul class="space-y-3 mb-8 relative z-10" data-i18n-list="service_logistics_list"></ul>
+
+                        <a href="https://wa.me/966506795405?text=I am interested in Logistics services." target="_blank"
+                            class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all relative z-10 group inline-block">
+                            <span>View Details</span>
+                            <i data-lucide="arrow-right"
+                                class="w-5 h-5 group-hover:text-secondary transition-colors rtl:rotate-180 inline-block align-middle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-primary/5 to-transparent relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-primary rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8"
+                data-aos="fade-up">
+                <!-- Background Decoration -->
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-48 h-48 bg-secondary/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2">
+                </div>
+
+                <!-- Content -->
+                <div class="relative z-10 text-center md:text-start rtl:md:text-right max-w-2xl">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-i18n="whatsapp_title">Looking for
+                        customized solution?</h2>
+                    <p class="text-lg text-gray-300 leading-relaxed" data-i18n="whatsapp_desc">Chat with us on WhatsApp
+                        for
+                        instant quote and support.</p>
+                </div>
+
+                <!-- Button -->
+                <div class="relative z-10">
+                    <a href="https://wa.me/966506795405?text=Hi, I would like to chat about a quote." target="_blank"
+                        class="flex items-center gap-3 bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-xl group">
+                        <i data-lucide="message-circle" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
+                        <span data-i18n="whatsapp_btn">Chat on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-primary pt-20 pb-10 text-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                            B
+                        </div>
+                        <span class="font-bold text-2xl text-white" data-i18n="company_name">Broge Al Shariaa</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-sm" data-i18n="tagline">For Operation & Maintenance</p>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold mb-6" data-i18n="footer_links">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="hover:text-white transition-colors"
+                                data-i18n="nav_about">Profile</a></li>
+                        <li><a href="#quality" class="hover:text-white transition-colors"
+                                data-i18n="nav_quality">Quality</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors"
+                                data-i18n="nav_services">Services</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors"
+                                data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold mb-6" data-i18n="footer_contact">Contact Information</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 mt-1 text-secondary"></i>
+                            <span class="text-sm">info@brogealshariaa.com<br>brogegroup@gmail.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 mt-1 text-secondary"></i>
+                            <span class="text-sm">Riyadh, Kingdom of Saudi Arabia</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <p data-i18n="rights_reserved">© 2024 All Rights Reserved. Broge Al Shariaa Est.</p>
+                <p class="text-gray-500">Designed with modern standards.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide Icons if available
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            // Initialize AOS if available, otherwise force visibility
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 50,
+                });
+            } else {
+                console.warn('AOS library not loaded. Removing animation attributes to show content.');
+                // Fallback: Remove data-aos attributes to make content visible
+                document.querySelectorAll('[data-aos]').forEach(el => {
+                    el.removeAttribute('data-aos');
+                    el.style.opacity = '1';
+                    el.style.transform = 'none';
+                });
+            }
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
