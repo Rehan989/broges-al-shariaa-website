@@ -12,7 +12,7 @@ const translations = {
         nav_contact: "Contact",
 
         // Hero
-        hero_title: "Welcome to Broges cleaning service",
+        hero_title: "Welcome to Broge cleaning service",
         hero_subtitle: "Home cleaning service in Riyadh, K.S.A",
         hero_card_title: "What are you looking for?",
 
