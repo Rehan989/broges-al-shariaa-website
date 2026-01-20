@@ -11,6 +11,12 @@ const translations = {
         nav_quality: "Quality",
         nav_contact: "Contact",
 
+        // Promo Banner
+        promo_title: "Home cleaning made easy",
+        promo_item_1: "Set frequency as needed",
+        promo_item_2: "Top-rated professionals",
+        promo_item_3: "Advanced equipment",
+
         // Hero
         hero_title: "Welcome to Broge cleaning service",
         hero_subtitle: "Home cleaning service in Riyadh, K.S.A",
@@ -114,6 +120,12 @@ const translations = {
         nav_about: "الملف التعريفي",
         nav_quality: "الجودة",
         nav_contact: "اتصل بنا",
+
+        // Promo Banner
+        promo_title: "تنظيف المنزل أصبح سهلاً",
+        promo_item_1: "حدد التكرار حسب الحاجة",
+        promo_item_2: "محترفون ذوو تصنيف عالي",
+        promo_item_3: "معدات متطورة",
 
         // Hero
         hero_title: "مرحبا بكم في خدمة تنظيف برج الشريعة",
