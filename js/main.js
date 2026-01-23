@@ -20,6 +20,7 @@ const translations = {
         // Hero
         hero_title: "Welcome to Broge cleaning service",
         hero_subtitle: "Home cleaning service in Riyadh, K.S.A",
+        hero_price: "25 Riyals per hour until Feb 10, 2026. Book Online",
         hero_card_title: "What are you looking for?",
 
         // Service Short Names (for Hero Card)
@@ -130,6 +131,7 @@ const translations = {
         // Hero
         hero_title: "مرحبا بكم في خدمة تنظيف برج الشريعة",
         hero_subtitle: "خدمة تنظيف المنازل في الرياض، المملكة العربية السعودية",
+        hero_price: "25 ريال بالساعة حتى 10 فبراير 2026. احجز الآن",
         hero_card_title: "عن ماذا تبحث؟",
 
         // Service Short Names (for Hero Card)
