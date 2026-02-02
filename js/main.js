@@ -31,6 +31,36 @@ const translations = {
         xs_facade: "Facade",
         xs_landscape: "Landscape",
 
+        // Pricing Section
+        pricing_title: "Cleaning Packages",
+        pricing_subtitle: "Choose the perfect plan for your home",
+
+        // Plan 1
+        plan_1_title: "General Cleaning",
+        plan_1_price: "150",
+        plan_1_currency: "SR",
+        plan_1_feature_1: "Deep cleaning 1 worker",
+        plan_1_feature_2: "Delivery and return",
+        plan_1_feature_3: "4 hours work",
+
+        // Plan 2
+        plan_2_title: "Deep Cleaning",
+        plan_2_price: "180",
+        plan_2_currency: "SR",
+        plan_2_feature_1: "Deep cleaning 1 worker",
+        plan_2_feature_2: "Delivery and return",
+        plan_2_feature_3: "6 hours work",
+
+        // Plan 3
+        plan_3_title: "Extra Deep Clean",
+        plan_3_price: "230",
+        plan_3_currency: "SR",
+        plan_3_feature_1: "Deep cleaning 1 worker",
+        plan_3_feature_2: "Delivery and return",
+        plan_3_feature_3: "8 hours work",
+
+        book_now: "Book Now",
+
         // About
         about_title: "Profile",
         about_desc: "We cover all basic services including Manpower Supply, Support Services, Operation & Maintenance, and many others. Each of the service sections specializes in serving our customers and focuses on serving them individually with the principle of achieving the highest results. To pursue excellence in all operations by improving quality standards and procedures and developing competitive people that can best render a world class service to clients.",
@@ -142,6 +172,36 @@ const translations = {
         xs_facade: "الواجهات",
         xs_landscape: "تنسيق الحدائق",
 
+        // Pricing Section
+        pricing_title: "باقات النظافة",
+        pricing_subtitle: "احجز الباقة المناسبة لاحتياجك",
+
+        // Plan 1
+        plan_1_title: "تنظيف عام",
+        plan_1_price: "150",
+        plan_1_currency: "ريال",
+        plan_1_feature_1: "تنظيف عميق عاملة واحدة",
+        plan_1_feature_2: "توصيل و ترجيع",
+        plan_1_feature_3: "عمل 4 ساعات",
+
+        // Plan 2
+        plan_2_title: "تنظيف عميق",
+        plan_2_price: "180",
+        plan_2_currency: "ريال",
+        plan_2_feature_1: "تنظيف عميق عاملة واحدة",
+        plan_2_feature_2: "توصيل و ترجيع",
+        plan_2_feature_3: "عمل 6 ساعات",
+
+        // Plan 3
+        plan_3_title: "تنظيف عميق إضافي",
+        plan_3_price: "230",
+        plan_3_currency: "ريال",
+        plan_3_feature_1: "تنظيف عميق عاملة واحدة",
+        plan_3_feature_2: "توصيل و ترجيع",
+        plan_3_feature_3: "عمل 8 ساعات",
+
+        book_now: "احجز الآن",
+
         // About
         about_title: "الملف التعريفي",
         about_desc: "نحن نغطي جميع الخدمات الأساسية بما في ذلك توريد القوى العاملة وخدمات الدعم والتشغيل والصيانة وغيرها الكثير. يتخصص كل قسم من أقسام الخدمة لدينا في خدمة عملائنا ويركز على خدمتهم بشكل فردي بمبدأ تحقيق أعلى النتائج. نسعى للتميز في جميع العمليات من خلال تحسين معايير وإجراءات الجودة وتطوير الكوادر التنافسية لتقديم خدمة عالمية المستوى للعملاء.",
@@ -151,6 +211,7 @@ const translations = {
         vision_desc: "التمسك بالقيم الإنسانية، واحترام الطبيعة ومساعدة الضعفاء والمحرومين من خلال العديد من الأنشطة، نأمل في تطوير سلسلة جديدة لفريقنا.",
         values_title: "قيمنا",
         values_desc: "التمسك بالقيم الإنسانية، والاستمرارية، والشفافية، والثقة.",
+
 
         // Why Us
         why_title: "لماذا اخترتنا؟",
