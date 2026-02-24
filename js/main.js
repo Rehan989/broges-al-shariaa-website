@@ -23,6 +23,16 @@ const translations = {
         hero_price: "25 Riyals per hour until Feb 10, 2026. Book Online",
         hero_card_title: "What are you looking for?",
 
+        // Promo Offer
+        promo_banner_title: "Broge Al Shariaa Cleaning Services in Riyadh",
+        promo_banner_subtitle: "Special Limited Time Offer",
+        promo_banner_offer1: "4 hours for <del class='text-red-300 font-normal text-lg'>170</del> 120 SR",
+        promo_banner_offer2: "6 hours for <del class='text-red-300 font-normal text-lg'>200</del> 150 SR",
+        promo_banner_validity: "Offer valid Feb 24, 25, and 26.",
+        promo_banner_staff: "Female staff of all nationalities",
+        promo_banner_expertise: "High expertise in deep cleaning",
+        promo_banner_laundry: "Washing and ironing clothes",
+
         // Service Short Names (for Hero Card)
         xs_pest: "Pest Control",
         xs_manpower: "Manpower",
@@ -163,6 +173,16 @@ const translations = {
         hero_subtitle: "خدمة تنظيف المنازل في الرياض، المملكة العربية السعودية",
         hero_price: "25 ريال بالساعة حتى 10 فبراير 2026. احجز الآن",
         hero_card_title: "عن ماذا تبحث؟",
+
+        // Promo Offer
+        promo_banner_title: "بروج الشريعة لخدمات التنظيف بالرياض",
+        promo_banner_subtitle: "خصم خاص لفترة محدودة",
+        promo_banner_offer1: "٤ ساعات بـ <del class='text-red-300 font-normal text-lg'>١٧٠</del> ١٢٠ ريال",
+        promo_banner_offer2: "٦ ساعات بـ <del class='text-red-300 font-normal text-lg'>٢٠٠</del> ١٥٠ ريال",
+        promo_banner_validity: "يسري العرض أيام 24 و25 و26 فبراير.",
+        promo_banner_staff: "عمالة نسائية من جميع الجنسيات",
+        promo_banner_expertise: "خبرة عالية في مجال التنظيف العميق",
+        promo_banner_laundry: "غسيل وكوي ملابس",
 
         // Service Short Names (for Hero Card)
         xs_pest: "مكافحة الآفات",
@@ -329,7 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
             if (translations[lang][key]) {
-                element.textContent = translations[lang][key];
+                element.innerHTML = translations[lang][key];
             }
         });
 
