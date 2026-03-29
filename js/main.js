@@ -25,10 +25,12 @@ const translations = {
 
         // Promo Offer
         promo_banner_title: "Broge Al Shariaa Cleaning Services in Riyadh",
-        promo_banner_subtitle: "Special Limited Time Offer",
-        promo_banner_offer1: "4 hours for <del class='text-red-300 font-normal text-lg'>170</del> 120 SR",
-        promo_banner_offer2: "6 hours for <del class='text-red-300 font-normal text-lg'>200</del> 150 SR",
-        promo_banner_validity: "Offer valid Feb 24, 25, and 26.",
+        promo_banner_subtitle: "Special Limited Time Offer in Riyadh",
+        promo_banner_offer1: "4 hours for 120 SR",
+        promo_banner_offer2: "6 hours for 150 SR",
+        promo_banner_offer3: "8 hours for 200 SR",
+        whatsapp_or_call: "WhatsApp or Call",
+        promo_banner_validity: "Offer valid March 29, 30, and 31.",
         promo_banner_staff: "Female staff of all nationalities",
         promo_banner_expertise: "High expertise in deep cleaning",
         promo_banner_laundry: "Washing and ironing clothes",
@@ -176,10 +178,12 @@ const translations = {
 
         // Promo Offer
         promo_banner_title: "بروج الشريعة لخدمات التنظيف بالرياض",
-        promo_banner_subtitle: "خصم خاص لفترة محدودة",
-        promo_banner_offer1: "٤ ساعات بـ <del class='text-red-300 font-normal text-lg'>١٧٠</del> ١٢٠ ريال",
-        promo_banner_offer2: "٦ ساعات بـ <del class='text-red-300 font-normal text-lg'>٢٠٠</del> ١٥٠ ريال",
-        promo_banner_validity: "يسري العرض أيام 24 و25 و26 فبراير.",
+        promo_banner_subtitle: "خصم خاص لفترة محدودة في الرياض",
+        promo_banner_offer1: "٤ ساعات بـ ١٢٠ ريالًا سعوديًا",
+        promo_banner_offer2: "٦ ساعات بـ ١٥٠ ريالًا سعوديًا",
+        promo_banner_offer3: "٨ ساعات بـ ٢٠٠ ريالًا سعوديًا",
+        whatsapp_or_call: "واتساب أو اتصال",
+        promo_banner_validity: "العرض ساري حتى ٢٩ و٣٠ و٣١ مارس.",
         promo_banner_staff: "عمالة نسائية من جميع الجنسيات",
         promo_banner_expertise: "خبرة عالية في مجال التنظيف العميق",
         promo_banner_laundry: "غسيل وكوي ملابس",
